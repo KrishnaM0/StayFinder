@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <form  method = "POST" action="/listings/<%=listing._id%>?_method=PUT">
+        <div class = "edit-form">
+            <h3>Edit</h3>
+
+            <div class = "form">
+                <div><label for="title">Title</label></div>
+                <input id = "title" type="text" name = "listing[title]" value = "<%=listing.title%>" placeholder = "Enter title"><br><br>
+            </div>
+
+            <div class = "form">
+                <div><label for="description">Description</label></div>
+                <textarea id = "description" name="listing[Description]" placeholder="Enter description" rows="2" cols="70"><%=listing.Description%></textarea><br><br>
+            </div>
+
+            <div class = "form">
+                <div><label for="image">Image URL</label></div>
+                <input id = "image" type="text" name = "listing[image]" placeholder = "Enter image url" value = "<%=listing.image%>"><br><br>
+            </div>
+         
+            <div class = "form">
+                <div><label for="price">Price</label></div>
+                <input id = "price" type="number" name = "listing[price]" placeholder="Enter price" value = "<%=listing.price%>"><br><br>    
+            </div>
+           
+            <div class = "form">
+                <div><label for="location">Location</label></div>
+                <input id = "location"type="text" name = "listing[location]" placeholder = "Enter location" value = "<%=listing.location%>"><br><br>
+            </div>
+            
+            <div class = "form">
+                <div><label for="country">Country</label></div>
+                <input id = "country" type="text" name = "listing[country]" placeholder = "Enter country name" value = "<%=listing.country%>"><br><br>    
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+
+    </form>
+</body>
