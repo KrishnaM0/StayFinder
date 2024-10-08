@@ -1,13 +1,19 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <div class="row">
-    <h3>All Listings</h3>
+    <div class = "explore-div">
+        <h2 class = "explore-detail">Welcome To StayFinder Platform</h2>
+        <p class = "explore-detail" style="color:#FFD700;">Making Tourist Renting Easy</p>
+    </div>
+    <div class="rows">
+    <h4 class = "listing-header mt-4 mb-3">Discover Our Featured Listings</h4>
         <% for(let listing of allListings){ %>
             <a href="/listings/<%=listing._id%>" class= "listing-link">
-                <div class="card" style="width: 18rem;">
-                    <img src="<%=listing.image%>" class="card-img-top" alt="listing">
-                    <div class="card-body">
-                        <p class="card-text"> <b><%=listing.title%></b> <br> &#x20B9;<%=listing.price.toLocaleString("en-IN")%> / night</p>
+                <div class="listing-cards">
+                    <div class="card" >
+                        <img src="<%=listing.image%>" class="card-img-top" alt="listing">
+                        <div class="card-body">
+                            <p class="card-text"> <b><%=listing.title%></b> <br> &#x20B9;<%=listing.price.toLocaleString("en-IN")%> / night</p>
+                        </div>
                     </div>
                 </div>
             </a>

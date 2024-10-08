@@ -1,28 +1,32 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
-    <div class="card-show">
-        <h4>Listing Details</h4>
-        <img src="<%=listing.image%>" class="card-show-img-top" alt="listing-img">
-        <div class="card-body">
-          <p class="card-text">
-            <b><%=listing.title%></b><br>
-            <%= listing.Description%> <br>
-            &#x20B9; <%= listing.price.toLocaleString("en-IN")%> / night <br>
-            <%= listing.location%> <br>
-            <%= listing.country%>
-          </p>
+    <div class = "container">
+        <div class="card-show">
+            <h4 class = "edit-form-header mt-4 mb-4">Listing Details</h4>
+            <img src="<%=listing.image%>" class="card-show-img-top" alt="listing-img">
+            <div class="card-body">
+              <p class="card-text">
+                <b><%=listing.title%></b><br>
+                <%= listing.Description%> <br>
+                &#x20B9; <%= listing.price.toLocaleString("en-IN")%> / night <br>
+                <%= listing.location%> <br>
+                <%= listing.country%>
+              </p>
+            </div>
         </div>
-    </div>
-    <hr>
-    <div class = "show-page-btn">
-        <form action="/listings/<%=listing._id%>/edit" method = "GET">
-            <button type="submit" class="btn btn-warning">Edit</button>
-        </form>
-        <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
-            <br>
-            <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
+        <hr>
+        <div class = "show-page-btn">
+            <form action="/listings/<%=listing._id%>/edit" method = "GET">
+                <button type="submit" class="btn btn-warning">Edit</button>
+            </form>
+            <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
+                <br>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <!-- <button type="submit" class="btn btn-outline-danger">Delete</button> -->
+            </form>
+        </div>
+        
     </div>
     
 </body>

@@ -1,42 +1,52 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
-    <form action="/listings" method = "POST">
-        <div class = "edit-form">
-            <h3>Create new stay</h3>
-            <div class = "form">
-                <div><label for="title">Title</label></div>
-                <input id = "title" type="text" name = "listing[title]" placeholder = "Enter title"><br><br>
+    <div class = "container">
+        <form action="/listings" method = "POST" class="needs-validation" novalidate>
+            <div class = "edit-form">
+                <h3 class = "edit-form-header">Create new stay</h3>
+                <div class = "form">
+                    <div><label for="title" class="form-label">Title</label></div>
+                    <input class="form-control" id = "title" type="text" name = "listing[title]" placeholder = "Enter title" required><br><br>
+                    <p class="valid-feedback">Looks good!</p>
+                    <p class="invalid-feedback">Title should be valid!</p>
+                </div>
+    
+                <div class = "form">
+                    <div><label for="description" class="form-label">Description</label></div>
+                    <textarea class="form-control" id = "description" name="listing[Description]" placeholder="Enter description" required></textarea><br><br>
+                    <p class="invalid-feedback">Please provide short description!</p>
+                </div>
+               
+                <div class = "form">
+                    <div><label for="image" class="form-label">Image URL</label></div>
+                    <input class="form-control" id = "image" type="text" name = "listing[image]" placeholder = "Enter image url"><br><br>    
+                    <p class="invalid-feedback">Image should be valid!</p>
+                </div>
+                
+    
+                <div class = "form">
+                    <div><label for="price" class="form-label">Price</label></div>
+                    <input class="form-control" id = "price" type="number" name = "listing[price]" placeholder="Enter price" required><br><br>    
+                    <p class="invalid-feedback">Price should be valid!</p>
+                </div>
+                
+                <div class = "form">
+                    <div><label for="location" class="form-label">Location</label></div>
+                    <input class="form-control" id = "location" type="text" name = "listing[location]" placeholder = "Enter location" required><br><br>
+                    <p class="invalid-feedback">Location should be valid!</p>
+                </div>
+                
+                <div class = "form">
+                    <div><label for="country" class="form-label">Country</label></div>
+                    <input class="form-control" id = "country" type="text" name = "listing[country]" placeholder = "Enter country name" required><br><br>
+                    <p class="invalid-feedback">Country name should be valid!</p>
+                </div>
+                
             </div>
-
-            <div class = "form">
-                <div><label for="description">Description</label></div>
-                <textarea id = "description" name="listing[Description]" placeholder="Enter description"></textarea><br><br>
-            </div>
-           
-            <div class = "form">
-                <div><label for="image">Image URL</label></div>
-                <input id = "image" type="text" name = "listing[image]" placeholder = "Enter image url"><br><br>    
-            </div>
-            
-
-            <div class = "form">
-                <div><label for="price">Price</label></div>
-                <input id = "price" type="number" name = "listing[price]" placeholder="Enter price"><br><br>    
-            </div>
-            
-            <div class = "form">
-                <div><label for="location">Location</label></div>
-                <input id = "location" type="text" name = "listing[location]" placeholder = "Enter location"><br><br>
-            </div>
-            
-            <div class = "form">
-                <div><label for="country">Country</label></div>
-                <input id = "country" type="text" name = "listing[country]" placeholder = "Enter country name"><br><br>
-            </div>
-            
-        </div>
-        <button type="submit" class="btn btn-success">Create</button>
-
-    </form>
+            <button type="submit" class="btn btn-success">Create</button>
+    
+        </form>
+    </div>
+    
 </body>

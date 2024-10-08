@@ -1,16 +1,23 @@
+body{
+    height: 100%;
+
+}
+
 .navbar{
     height : 5rem;
     background-color: white;
 }
 .fa-compass{
     color : #fe424d;
-    font-size : 2rem;
+    font-size : 3rem;
 }
 .nav-link{
     color : #222222 !important;
+    font-weight: 500 !important;
+    margin-right : 1rem;
 }
 .nav-link:hover{
-    text-decoration: underline;
+    color : red !important;
 }
 .f-info-links a{
     text-decoration: none;
@@ -48,12 +55,14 @@
 .card{
     border : none !important;
     margin-top : 1rem !important;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem !important;
+
 }
 .card-img-top{
-    border-radius: 1rem !important;
+    border-radius: 0.5rem !important;
     height : 15rem;
-    width : 100 !important;
+    margin-left : 0.5rem;
 }
 .card-body{
     padding : 0.3rem !important;
@@ -61,6 +70,7 @@
 }
 .card-text{
     font-weight: 400;
+    text-align: left;
 }
 
 .listing-link{
@@ -73,11 +83,11 @@
 }
 .navbar-brand{
     display: flex;
-    width: 12%;
+    width: 20%;
 }
 .logo-name{
     margin-left : 0.3rem;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 .edit-form{
     margin-left: 2rem;
@@ -100,18 +110,15 @@
     margin-left: 2.2rem;
     font-weight: 500 !important;
 }
-.row{
-    margin-top : 1rem !important;
-    margin-left : 1rem !important;
-}
-.form { 
-    margin-top : 0 !important;
 
+.form { 
+    margin-bottom : -1.5rem !important;
 }
 
 .card-show-img-top{
-    border-radius: 1rem;    
+    border-radius: 0.5rem;    
     width : 50%;
+    height : 20rem;
 }
 
 .show-page-btn .btn-warning{
@@ -125,6 +132,12 @@
     margin-left: 1.5rem;
     margin-top : -0.45rem;
 }
+/* .show-page-btn .btn-outline-danger{
+    margin-bottom : 1.5rem;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    margin-top : -0.45rem;
+} */
 .pageNotFound{
     text-align: center;
 }
@@ -154,10 +167,48 @@
 .navbar-collapse.show {
     background-color: #f8f9fa; /* Change to the desired color */
 }
+.edit-form-header{
+    margin-bottom : 1rem !important;
+}
+.form-control{
+    border: 2px solid rgba(20, 20, 21, 0.5) !important;
+}
 
+.finder-color{
+    color : red;
+}
+
+.rows{
+    margin-top : 1rem;
+    text-align: center;
+}
+.invalid-feedback{
+    margin-top: -2.5rem !important;
+    margin-bottom : 2.5rem !important;
+}
+.valid-feedback{
+    margin-top: -2.5rem !important;
+    margin-bottom : 2.5rem !important;
+}
+.explore-div{
+    height : 25rem;
+    width : 100% !important;
+    /* background: linear-gradient(to bottom, rgba(212, 191, 255, 0.8), rgba(191, 234, 255, 0.8)); */
+    background-color: rgba(0, 0, 0, 0.8);
+    color : white;
+    text-align: center;
+    padding : 2rem;
+}
+.explore-div h2{
+    padding-top : 8rem;
+}
+.explore-detail{
+    font-weight: 500;
+}
 @media (max-width: 900px) {
     .card-show-img-top{
         width : 100%;
+        height : 15rem;
     }
     .pageNotFound img{
         width : 100%;
