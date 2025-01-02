@@ -2,31 +2,69 @@
 
 <body>
     <div class = "container">
-        <div class="card-show">
-            <h4 class = "edit-form-header mt-4 mb-4">Listing Details</h4>
-            <img src="<%=listing.image%>" class="card-show-img-top" alt="listing-img">
-            <div class="card-body">
-              <p class="card-text">
-                <b><%=listing.title%></b><br>
-                <%= listing.Description%> <br>
-                &#x20B9; <%= listing.price.toLocaleString("en-IN")%> / night <br>
-                <%= listing.location%> <br>
-                <%= listing.country%>
-              </p>
+        <div class = "show-contact">
+            <span class="card-show">
+                <h4 class = "edit-form-header mt-4 mb-4"><%=listing.title%></h4>
+                <img src="<%=listing.image%>" class="card-show-img-top" alt="listing-img">
+                <div class="card-body">
+                  <p class="card-text">
+                    <%= listing.Description%> <br>
+                    &#x20B9; <%= listing.price.toLocaleString("en-IN")%> / night <br>
+                    <%= listing.location%> <br>
+                    <%= listing.country%>
+                  </p>
+                </div>
+    
+                <span class = "show-page-btn">
+                    <form action="/listings/<%=listing._id%>/edit" method = "GET">
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                    </form>
+                    <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
+                        <br>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <!-- <button type="submit" class="btn btn-outline-danger">Delete</button> -->
+                    </form>
+                </span>
+            </span>
+            <div class = "contact-show">
+                <img src="/images/agent.avif" alt="agent-img">
+                <h4>Agent</h4>
             </div>
         </div>
+        
+        
         <hr>
-        <div class = "show-page-btn">
-            <form action="/listings/<%=listing._id%>/edit" method = "GET">
-                <button type="submit" class="btn btn-warning">Edit</button>
-            </form>
-            <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
-                <br>
-                <button type="submit" class="btn btn-danger">Delete</button>
-                <!-- <button type="submit" class="btn btn-outline-danger">Delete</button> -->
+
+        <div class = "review mb-3">
+            <h4>Leave a Review</h4>
+            <form action="/listings/<%=listing._id%>/reviews" method = "POST">
+                <div class = "mb-3 mt-3">
+                    <label for="rating" class = "form-label">Rating</label>
+                    <input type="range" min = "1" max = "5" id = "rating" name = "review[rating]" class="form-range">
+                </div>
+                <div class = "mb-3 mt-3">
+                    <label for="comment" class = "form-label"><b style="opacity: 0.9;">Comment</b></label>
+                    <textarea class = "form-control" name="review[comment]" id="comment" rows="5" cols="30" placeholder="Enter your comment here..!" required></textarea>
+                </div>
+                <button class = "btn btn-outline-dark">Submit</button>
             </form>
         </div>
-        
+        <hr>
+        <h4>All Reviews</h4>
+        <div class = "row">
+            <%for(review of listing.reviews){%>
+                <div class = "card col-5 ms-3 mb-3">
+                    <div class="card-body">
+                        <h5 class = "card-title">John Doe</h5>
+                        <p class = "card-text"><%=review.comment%></p>
+                        <p class = "card-text"><%=review.rating%> stars</p>
+                        <form class = "mb-3" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                            <button class = "btn btn-sm btn-dark">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <%}%>
+        </div>
     </div>
     
 </body>
