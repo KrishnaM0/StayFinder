@@ -132,12 +132,7 @@ body{
     margin-left: 1.5rem;
     margin-top : -0.45rem;
 }
-/* .show-page-btn .btn-outline-danger{
-    margin-bottom : 1.5rem;
-    font-weight: 500;
-    margin-left: 1.5rem;
-    margin-top : -0.45rem;
-} */
+
 .pageNotFound{
     text-align: center;
 }
@@ -165,7 +160,7 @@ body{
     width:100%;
 }
 .navbar-collapse.show {
-    background-color: #f8f9fa; /* Change to the desired color */
+    background-color: #f8f9fa; 
 }
 .edit-form-header{
     margin-bottom : 1rem !important;
