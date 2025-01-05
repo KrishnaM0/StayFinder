@@ -39,7 +39,7 @@
             <h4>Leave a Review</h4>
             <form action="/listings/<%=listing._id%>/reviews" method = "POST">
                 <div class = "mb-3 mt-3">
-                    <label for="rating" class = "form-label">Rating</label>
+                    <label for="rating" class = "form-label"><b style="opacity: 0.9;">Rating</b></label>
                     <input type="range" min = "1" max = "5" id = "rating" name = "review[rating]" class="form-range">
                 </div>
                 <div class = "mb-3 mt-3">
@@ -53,7 +53,7 @@
         <h4>All Reviews</h4>
         <div class = "row">
             <%for(review of listing.reviews){%>
-                <div class = "card col-5 ms-3 mb-3">
+                <div class = "reviewCard card col-5 ms-3 mb-3">
                     <div class="card-body">
                         <h5 class = "card-title">John Doe</h5>
                         <p class = "card-text"><%=review.comment%></p>
