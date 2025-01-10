@@ -1,8 +1,6 @@
 body{
     height: 100%;
-
 }
-
 .navbar{
     height : 5rem;
     background-color: white;
@@ -156,7 +154,7 @@ body{
 }
 .f-info{
     position:relative;
-    bottom:0px;
+    bottom: 0;
     width:100%;
 }
 .navbar-collapse.show {
@@ -231,7 +229,25 @@ form .btn-outline-dark{
 form .btn-dark{
     font-weight: 500;
 }
-
+.signup-page{
+    padding : 2rem;
+    margin : 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0 0.8rem rgba(125, 123, 123, 0.5);
+}
+.signup-btn{
+    width : 100%;
+}
+.login-btn{
+    width : 100%;
+}
+.alert{
+    position: absolute !important;
+    z-index: 1000 !important;
+    right : 1rem !important;
+    width: 40% !important;
+    margin-top : 0.5rem;
+}
 @media (max-width: 930px) {
     .card-show-img-top{
         width : 100%;
@@ -256,7 +272,6 @@ form .btn-dark{
     .contact-show{
         width : 50%;
         margin: auto;      
-        /* text-align: center !important; */
     }
     .contact-show img{
         margin : 0rem;
@@ -267,5 +282,19 @@ form .btn-dark{
     }
     .reviewCard{
         width : 90% !important;
+    }
+    .alert{
+        width: 100% !important;
+        right : 0rem !important;
+    }
+    .signup-container{
+        width : 100% !important;
+        margin-right: 0 !important;
+        margin-left : 0 !important;
+    }
+    .signup-page{
+        width : 100% !important;
+        margin-right: 0 !important;
+        margin-left : 0 !important;
     }
 }
