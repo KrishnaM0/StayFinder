@@ -248,6 +248,27 @@ form .btn-dark{
     width: 40% !important;
     margin-top : 0.5rem;
 }
+.agent-conect a{
+    text-decoration: none;
+    color : black;
+}
+.email-agent i {
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 500;
+}
+.email-agent i:hover {
+    font-weight: 700;
+}
+.phone-agent i{
+    font-size: 1.6rem;
+    color: green;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+.phone-agent i:hover{
+    font-weight: 700;
+}
 @media (max-width: 930px) {
     .card-show-img-top{
         width : 100%;
@@ -286,15 +307,5 @@ form .btn-dark{
     .alert{
         width: 100% !important;
         right : 0rem !important;
-    }
-    .signup-container{
-        width : 100% !important;
-        margin-right: 0 !important;
-        margin-left : 0 !important;
-    }
-    .signup-page{
-        width : 100% !important;
-        margin-right: 0 !important;
-        margin-left : 0 !important;
     }
 }

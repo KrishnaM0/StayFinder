@@ -28,7 +28,15 @@
             </span>
             <div class = "contact-show">
                 <img src="/images/agent.avif" alt="agent-img">
-                <h4>Agent</h4>
+                <h4><%= listing.owner.username %></h4>
+                <div class = "agent-conect">
+                    <a href="mailto:<%=listing.owner.email%>" class = "email-agent">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/<%=listing.owner.phone%>" class = "phone-agent">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         </div>
         
