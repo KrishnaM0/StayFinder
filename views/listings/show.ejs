@@ -14,17 +14,19 @@
                     <%= listing.country%>
                   </p>
                 </div>
-    
-                <span class = "show-page-btn">
-                    <form action="/listings/<%=listing._id%>/edit" method = "GET">
-                        <button type="submit" class="btn btn-warning">Edit</button>
-                    </form>
-                    <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
-                        <br>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        <!-- <button type="submit" class="btn btn-outline-danger">Delete</button> -->
-                    </form>
-                </span>
+                <% if(currUser && currUser._id.equals(listing.owner._id)){%>
+                    <span class = "show-page-btn">
+                        <form action="/listings/<%=listing._id%>/edit" method = "GET">
+                            <button type="submit" class="btn btn-warning">Edit</button>
+                        </form>
+                        <form action="/listings/<%=listing._id%>?_method=delete" method = "POST">
+                            <br>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <!-- <button type="submit" class="btn btn-outline-danger">Delete</button> -->
+                        </form>
+                    </span>
+                <%}%>
+                
             </span>
             <div class = "contact-show">
                 <img src="/images/agent.avif" alt="agent-img">
@@ -42,7 +44,7 @@
         
         
         <hr>
-
+        <% if(currUser){%>
         <div class = "review mb-3">
             <h4>Leave a Review</h4>
             <form action="/listings/<%=listing._id%>/reviews" method = "POST">
@@ -58,17 +60,23 @@
             </form>
         </div>
         <hr>
+        <% } %>
         <h4>All Reviews</h4>
         <div class = "row">
             <%for(review of listing.reviews){%>
                 <div class = "reviewCard card col-5 ms-3 mb-3">
                     <div class="card-body">
-                        <h5 class = "card-title">John Doe</h5>
+                        <h5 class = "card-title">
+                            <!-- <a href="https://wa.me/<%=review.author.phone%>" class = "review-connect"><%=review.author.username%></a> -->
+                            <a href="mailto:<%=review.author.email%>" class = "review-connect"><%=review.author.username%></a>
+                        </h5>
                         <p class = "card-text"><%=review.comment%></p>
                         <p class = "card-text"><%=review.rating%> stars</p>
-                        <form class = "mb-3" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                            <button class = "btn btn-sm btn-dark">Delete</button>
-                        </form>
+                        <%if(currUser){%>
+                            <form class = "mb-3" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                                <button class = "btn btn-sm btn-dark">Delete</button>
+                            </form>
+                        <%}%>
                     </div>
                 </div>
             <%}%>

@@ -269,6 +269,10 @@ form .btn-dark{
 .phone-agent i:hover{
     font-weight: 700;
 }
+.review-connect{
+    text-decoration: none;
+    color : black;
+}
 @media (max-width: 930px) {
     .card-show-img-top{
         width : 100%;
