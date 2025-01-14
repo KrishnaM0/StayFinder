@@ -2,7 +2,7 @@
 
 <body>
     <div class = "container">
-        <form action="/listings" method = "POST" class="needs-validation" novalidate>
+        <form action="/listings" method = "POST" class="needs-validation" novalidate enctype="multipart/form-data">
             <div class = "edit-form">
                 <h3 class = "edit-form-header">Create new stay</h3>
                 <div class = "form">
@@ -17,14 +17,13 @@
                     <textarea class="form-control" id = "description" name="listing[Description]" placeholder="Enter description" required></textarea><br><br>
                     <p class="invalid-feedback">Please provide short description!</p>
                 </div>
-               
+
                 <div class = "form">
-                    <div><label for="image" class="form-label">Image URL</label></div>
-                    <input class="form-control" id = "image" type="text" name = "listing[image]" placeholder = "Enter image url"><br><br>    
+                    <div><label for="image" class="form-label">Upload Listing Image</label></div>
+                    <input class="form-control" id = "image" type="file" name = "listing[image]" placeholder = "Enter image url"><br><br>    
                     <p class="invalid-feedback">Image should be valid!</p>
                 </div>
                 
-    
                 <div class = "form">
                     <div><label for="price" class="form-label">Price</label></div>
                     <input class="form-control" id = "price" type="number" name = "listing[price]" placeholder="Enter price" required><br><br>    
