@@ -4,16 +4,15 @@ const Review = require("./review.js");
 const listingSchema = new mongoose.Schema({
     title: {
         type : String,
-        required : true
+        required : true,
     },
     Description : {
         type : String,
         required : true,
     },
     image : {
-        type : String,
-        default : "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        set: (v) => v==="" ? "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2": v,
+        url : String,
+        filename : String,  
     },
     price : {
         type : Number,

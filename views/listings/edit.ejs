@@ -2,7 +2,7 @@
 
 <body>
     <div class = "container">
-        <form  method = "POST" action="/listings/<%=listing._id%>?_method=PUT" class="needs-validation" novalidate>
+        <form  method = "POST" action="/listings/<%=listing._id%>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
             <div class = "edit-form">
                 <h3 class = "edit-form-header">Edit details</h3>
     
@@ -19,9 +19,15 @@
                     <p class="invalid-feedback">Please provide short description!</p>
                 </div>
     
+                <div class = "mb-3">
+                    <p>Original Listing Image</p>
+                    <img src="<%=listing.image.url%>" alt="listing-img" style="height : 14rem; width : 18rem;">
+                    <!-- <img src="<%=originalImageUrl%>" alt="listing-img"> -->
+                </div>
+
                 <div class = "form">
-                    <div><label for="image" class="form-label">Image URL</label></div>
-                    <input class="form-control" id = "image" type="text" name = "listing[image]" placeholder = "Enter image url" value = "<%=listing.image%>" required><br><br>
+                    <div><label for="image" class="form-label">Upload New Image</label></div>
+                    <input class="form-control" id = "image" type="file" name = "listing[image]"><br><br>    
                     <p class="invalid-feedback">Image should be valid!</p>
                 </div>
              

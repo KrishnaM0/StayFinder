@@ -11,7 +11,7 @@
             <a href="/listings/<%=listing._id%>" class= "listing-link">
                 <div class="listing-cards">
                     <div class="card listing-card" >
-                        <img src="<%=listing.image%>" class="card-img-top" alt="listing">
+                        <img src="<%=listing.image.url%>" class="card-img-top" alt="listing">
                         <div class="card-body">
                             <p class="card-text"> <b><%=listing.title%></b> <br> &#x20B9;<%=listing.price.toLocaleString("en-IN")%> / night</p>
                         </div>
