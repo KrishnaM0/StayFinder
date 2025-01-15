@@ -154,8 +154,8 @@ body{
 }
 .f-info{
     position:relative;
-    bottom: 0;
     width:100%;
+    bottom: 0;
 }
 .navbar-collapse.show {
     background-color: #f8f9fa; 
@@ -273,6 +273,7 @@ form .btn-dark{
     text-decoration: none;
     color : black;
 }
+
 @media (max-width: 930px) {
     .card-show-img-top{
         width : 100%;

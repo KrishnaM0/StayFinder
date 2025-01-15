@@ -78,7 +78,7 @@ app.use((req, res, next)=>{
 // });
 
 app.get("/", (req, res)=>{
-    res.render("listings/home.ejs");
+    res.redirect("/listings");
 });
 
 app.use("/listings", listingRouter);

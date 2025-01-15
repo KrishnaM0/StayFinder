@@ -26,7 +26,6 @@
                         </form>
                     </span>
                 <%}%>
-                
             </span>
             <div class = "contact-show">
                 <img src="/images/agent.avif" alt="agent-img">
@@ -73,26 +72,28 @@
         </div>
         <hr>
         <% } %>
-        <h4>All Reviews</h4>
-        <div class = "row">
-            <%for(review of listing.reviews){%>
-                <div class = "reviewCard card col-5 ms-3 mb-3">
-                    <div class="card-body">
-                        <h5 class = "card-title">
-                            <!-- <a href="https://wa.me/<%=review.author.phone%>" class = "review-connect"><%=review.author.username%></a> -->
-                            <a href="mailto:<%=review.author.email%>" class = "review-connect"><%=review.author.username%></a>
-                        </h5>
-                        <p class="starability-result card-text" data-rating="<%=review.rating%>">
-                        <p class = "card-text"><%=review.comment%></p>
-                        <%if(currUser){%>
-                            <form class = "mb-3" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                                <button class = "btn btn-sm btn-dark">Delete</button>
-                            </form>
-                        <%}%>
+        <%if(listing.reviews.length > 0){%>
+            <h4>All Reviews</h4>
+            <div class = "row">
+                <%for(review of listing.reviews){%>
+                    <div class = "reviewCard card col-5 ms-3 mb-3">
+                        <div class="card-body">
+                            <h5 class = "card-title">
+                                <!-- <a href="https://wa.me/<%=review.author.phone%>" class = "review-connect"><%=review.author.username%></a> -->
+                                <a href="mailto:<%=review.author.email%>" class = "review-connect"><%=review.author.username%></a>
+                            </h5>
+                            <p class="starability-result card-text" data-rating="<%=review.rating%>">
+                            <p class = "card-text"><%=review.comment%></p>
+                            <%if(currUser){%>
+                                <form class = "mb-3" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                                    <button class = "btn btn-sm btn-dark">Delete</button>
+                                </form>
+                            <%}%>
+                        </div>
                     </div>
-                </div>
-            <%}%>
-        </div>
+                <%}%>
+            </div>
+        <%}%>
     </div>
     
 </body>
