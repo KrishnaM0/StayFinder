@@ -313,4 +313,13 @@ form .btn-dark{
         width: 100% !important;
         right : 0rem !important;
     }
+    .signup-page{
+        margin-right : -3.5rem;
+        margin-left : -3.5rem;
+    }
+    .signup-container{
+        padding : 1rem;
+        padding-right : 0.5rem;
+        padding-left : 0.5rem;
+    }
 }
