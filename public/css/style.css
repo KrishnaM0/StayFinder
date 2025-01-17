@@ -279,7 +279,17 @@ form .btn-dark{
 .btn-search{
     margin-left: 0.5rem;
 }
-
+.f-info-socials a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-socials a i{
+    font-size: 1.3rem;
+}
+.f-info{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 @media (max-width: 930px) {
     .card-show-img-top{
         width : 100%;
