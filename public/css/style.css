@@ -273,6 +273,9 @@ form .btn-dark{
     text-decoration: none;
     color : black;
 }
+.logout:hover{
+    text-decoration: overline;
+}
 
 @media (max-width: 930px) {
     .card-show-img-top{
@@ -321,5 +324,57 @@ form .btn-dark{
         padding : 1rem;
         padding-right : 0.5rem;
         padding-left : 0.5rem;
+    }
+    .fa-compass{
+        /* display: none !important; */
+        /* font-size: 3rem !important; */
+    }
+    .nav-link{
+        padding : 0.5rem !important;
+        padding-top: 2rem;
+        border : none;
+        border-radius: 1rem !important;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0.6rem !important;
+        text-align: center;
+    }
+    .nav-link:hover{
+        background-color: rgba(252, 8, 24, 0.2) !important;
+    }
+    .search-inp{
+        margin-top: 1rem !important;
+        font-size: 0.8rem;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-top: 0.3rem !important;
+        padding-bottom: 0.3rem !important;
+        text-align: center;
+    }
+    .searchword{
+        display: none;
+    }
+    .fa-magnifying-glass{
+        margin-right: 0 !important;
+    }
+    .logout{
+        margin-top: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .login{
+        margin-bottom: 1.5rem !important;
+    }
+    .logout:hover{
+        text-decoration: none;
+    }
+    .explore{
+        margin-top: 2rem !important;
+    }
+    .btn-search{
+        display: none !important;
+    }
+    .search-form{
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
     }
 }
