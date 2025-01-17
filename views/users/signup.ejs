@@ -9,20 +9,19 @@
                 <form action="/signup" method = "POST" class = "needs-validation" novalidate>
                     <div class = "mb-3">
                         <label for="username" class = "form-label">Username</label>
-                        <input placeholder = "username" id = "username" class = "form-control" type="text" required>
+                        <input name = "username" id = "username" class = "form-control" type="text" placeholder="username" required>
                     </div>
                     <div class = "mb-3">
                         <label for="email" class = "form-label">Email</label>
-                        <input placeholder = "email" id = "email" class = "form-control" type="email" required>
+                        <input name = "email" id = "email" class = "form-control" type="email" placeholder = "email" required>
                     </div>
                     <div class = "mb-3">
                         <label for="password" class = "form-label">Password</label>
-                        <input placeholder = "password" id = "password" class = "form-control" type="password" required>
+                        <input name = "password" id = "password" class = "form-control" type="password" placeholder = "password" required>
                     </div>
                     <div class = "mb-3">
                         <label for="mobileNumber" class = "form-label">Mobile Number</label>
-                        <input name = "phone" id = "mobileNumber" class = "form-control" type="number" value="91" 
-                        placeholder="+91 00000 00000">
+                        <input name = "phone" id = "mobileNumber" class = "form-control" type="number" placeholder="+91 00000 00000">
                     </div>
                     <button class = "btn btn-success signup-btn" style="margin-left: 0;">Sign up</button>
                 </form>
